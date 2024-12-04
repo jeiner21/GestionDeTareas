@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/templates.css}">
+</head>
+<body>
+    <header th:fragment="header">
+        <h1> Tareas </h1>
+        <nav>
+            <ul>
+                <li> <a th:href="@{/}">Inicio</a></li>
+                <li> <a th:href="@{/add}">Agregar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <footer th:fragment="footer">
+        <p>Gestion de tareas 2024</p>
+    </footer>
+    
+</body>
+</html>

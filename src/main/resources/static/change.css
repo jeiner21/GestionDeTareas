@@ -1,0 +1,96 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - 120px); /* Ajusta según la altura del header y footer */
+}
+h2{
+    text-align: center;
+    font: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Formulario */
+form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo de las etiquetas */
+form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #333;
+}
+
+/* Inputs y select */
+form input[type="text"],
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+/* Efectos de focus */
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Botón de guardar */
+form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Mensajes de error */
+span[th\:if] {
+    color: red;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Espaciado interno en el formulario */
+form br {
+    margin-bottom: 1rem;
+}
+
+

@@ -1,0 +1,88 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del body */
+.container {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 1rem;
+}
+
+/* Contenedor para el contenido principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+/* Reset básico para enlaces */
+a {
+    text-decoration: none; /* Elimina la línea debajo del texto */
+    color: #ffffff; /* Cambia el color del texto */
+    display: inline-block; /* Necesario para que se comporte como botón */
+    padding: 10px 20px; /* Añade espacio interno para que parezca un botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    border: none; /* Elimina bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto más grueso */
+    text-align: center; /* Centra el texto */
+    cursor: pointer; /* Cambia el cursor al estilo de un botón */
+    transition: background-color 0.3s ease; /* Animación suave */
+}
+
+/* Estilo general de los enlaces/botones */
+a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul por defecto */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para los botones generales */
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Efecto para el botón eliminar (color rojo) */
+a.delete {
+    background-color: #dc3545; /* Rojo */
+}
+
+a.delete:hover {
+    background-color: #a71d2a; /* Rojo más oscuro en hover */
+}
+
+a.delete:active {
+    background-color: #7a101e; /* Rojo más oscuro al presionar */
+    transform: scale(0.98);
+}

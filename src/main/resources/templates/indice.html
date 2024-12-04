@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" th:href="@{/templates.css}">   
+
+</head>
+<body>
+    <header th:replace="template1/Plantilla :: header"></header>
+    <div class="container">
+    <div th:if="${project != null and !project.empty}">   
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Estado</th>
+                <th>Fecha de entrega</th>
+                <th>Modificar</th>
+                <th>Elimnar</th>
+            </tr>
+            <tr th:each="proj : ${project}">
+                <td th:text="${proj.name}"></td>
+                <td th:text="${proj.description}"></td>
+                <td th:text="${proj.ready}"></td>
+                <td th:text="${proj.date}"></td>
+                <td> <a th:href="@{/change/{Idhomework}(Idhomework=${proj.Idhomework})}" th:text="Modificar"></a></td>
+                <td> <a th:href="@{/Delete/{Idhomework}(Idhomework=${proj.Idhomework})}" class="delete" th:text="Eliminar"></a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+    <footer th:replace="template1/Plantilla :: footer"></footer>
+   
+    
+</body>
+</html>

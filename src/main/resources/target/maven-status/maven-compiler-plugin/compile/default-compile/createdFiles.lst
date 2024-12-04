@@ -1,0 +1,6 @@
+com\project\ProjectSpringBoot\domain\Project.class
+com\project\ProjectSpringBoot\service\ProjectService.class
+com\project\ProjectSpringBoot\service\ProjectServiceIMP.class
+com\project\ProjectSpringBoot\mx\ProjectRepository.class
+com\project\ProjectSpringBoot\web\ControladorRest.class
+com\project\ProjectSpringBoot\ProjectSpringBootApplication.class

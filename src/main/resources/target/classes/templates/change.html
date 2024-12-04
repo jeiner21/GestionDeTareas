@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/change.css}">
+    <link rel="stylesheet" th:href="@{/templates.css}">
+</head>
+<body>
+    <header th:replace="template1/Plantilla :: header"></header>
+    <div class="container">
+   
+    <form th:action="@{/Save}" method="post" th:object="${project}"><br>
+
+        <input type="hidden" name="Idhomework" th:field="*{Idhomework}">
+       <h2> Gestión de tareas</h2>
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" th:field="*{name}">
+        <span th:if="${#fields.hasErrors('name')}" th:errores="*{name}"> Error en el nombre</span> <br><br>
+
+        <label for="description">Descripción:</label>
+        <input type="text" name="description" th:field="*{description}"><br><br>
+
+        <label for="ready">Estado:</label>
+        <select name="ready" th:field="*{ready}">
+            <option value="Terminado" th:text="'Terminado'"></option>
+            <option value="En proceso" th:text="'En proceso'"></option>
+            <option value="Pendiente" th:text="'Pendiente'"></option>
+        </select> <br><br>
+
+        <label for="date">Fecha de entrega:</label>
+        <input type="date" name="date" th:field="*{date}" required> <br><br>
+
+        <button type="submit">Guardar</button>
+
+
+    </form>
+
+</div>
+    <footer th:replace="template1/Plantilla :: footer"></footer>
+    
+</body>
+</html>
